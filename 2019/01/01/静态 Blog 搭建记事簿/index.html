@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="雾之,宅">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="记得之前有人吐槽过每个静态 Blog 搭建完都要写一篇如何搭建 Blog 的文章，然后就弃坑不再写其他东西了。所以一开始说要写这种文章我是拒绝的。 可是真的折腾这么一圈之后，对于一个没啥编程基础的小白来说涉及的东西太多了，总归还是要找个地方整理记录一下，虽然教程有很多，但基本都做不到完美，每个人有每个人不同的需求，所以还是自己记录一下自己的事情吧。">
+<meta name="keywords" content="雾之,宅">
+<meta property="og:type" content="article">
+<meta property="og:title" content="静态 Blog 搭建记事簿">
+<meta property="og:url" content="http://yoursite.com/2019/01/01/静态 Blog 搭建记事簿/index.html">
+<meta property="og:site_name" content="雾之宅落">
+<meta property="og:description" content="记得之前有人吐槽过每个静态 Blog 搭建完都要写一篇如何搭建 Blog 的文章，然后就弃坑不再写其他东西了。所以一开始说要写这种文章我是拒绝的。 可是真的折腾这么一圈之后，对于一个没啥编程基础的小白来说涉及的东西太多了，总归还是要找个地方整理记录一下，虽然教程有很多，但基本都做不到完美，每个人有每个人不同的需求，所以还是自己记录一下自己的事情吧。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-01T16:01:28.698Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="静态 Blog 搭建记事簿">
+<meta name="twitter:description" content="记得之前有人吐槽过每个静态 Blog 搭建完都要写一篇如何搭建 Blog 的文章，然后就弃坑不再写其他东西了。所以一开始说要写这种文章我是拒绝的。 可是真的折腾这么一圈之后，对于一个没啥编程基础的小白来说涉及的东西太多了，总归还是要找个地方整理记录一下，虽然教程有很多，但基本都做不到完美，每个人有每个人不同的需求，所以还是自己记录一下自己的事情吧。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/01/01/静态 Blog 搭建记事簿/">
+
+
+
+
+
+  <title>静态 Blog 搭建记事簿 | 雾之宅落</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">雾之宅落</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-university"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            雾之
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/01/静态 Blog 搭建记事簿/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="雾之">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="雾之宅落">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">静态 Blog 搭建记事簿</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-01T21:26:55+08:00">
+                2019-01-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术-Blog-搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">-技术 -Blog 搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/01/01/静态 Blog 搭建记事簿/" class="leancloud_visitors" data-flag-title="静态 Blog 搭建记事簿">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>记得之前有人吐槽过每个静态 Blog 搭建完都要写一篇如何搭建 Blog 的文章，然后就弃坑不再写其他东西了。所以一开始说要写这种文章我是拒绝的。</p>
+<p>可是真的折腾这么一圈之后，对于一个没啥编程基础的小白来说涉及的东西太多了，总归还是要找个地方整理记录一下，虽然教程有很多，但基本都做不到完美，每个人有每个人不同的需求，所以还是自己记录一下自己的事情吧。</p>
+<a id="more"></a>
+<h2 id="1-事前准备"><a href="#1-事前准备" class="headerlink" title="1 事前准备"></a>1 事前准备</h2><h3 id="Git工具"><a href="#Git工具" class="headerlink" title="Git工具"></a>Git工具</h3><p>用来提交代码的，好像还有其他用处但是一直没时间细研究，命令行什么的基本都是 google 到之后复制粘贴进去的，并没有什么难度。</p>
+<h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>这东西应该是环境的一种，安装了就好，不需要具体操作什么。</p>
+<h3 id="Atom"><a href="#Atom" class="headerlink" title="Atom"></a>Atom</h3><p>这个感觉上大概是一个用来写代码的东西，当然也看到有人用这个来写 Markdown 文件，但是我试了下不是特别习惯，我下载他主要是用来改配置文件，这里提前说一下：<strong>不要用记事本去修改配置文件</strong>，因为如果在配置文件中需要加入中文的话，可能在网页中会现实乱码，虽然一些问题可以通过 <code>另存为 - 更改编码为 UTF-8 - 覆盖</code> 来解决，但是这个方法并不适用于所有问题，还有可能把你的配置文件彻底搞坏（亲身经历）。</p>
+<h3 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h3><p>Markdown 编辑器，写博客就靠这个了，说实话 Markdown 用习惯之后其他写文的方式全都弱爆了。</p>
+<h3 id="Github账号"><a href="#Github账号" class="headerlink" title="Github账号"></a>Github账号</h3><p>因为现在记录的是在 Github 上搭建静态博客的过程，所以肯定是需要 Github 账号的，从我个人的角度来说选择这个方式主要是因为免费，而且网上能找到的很多教程都是针对这个方式搭建博客的。如果我能坚持几个月到半年一直稳定更新博客的话，我可能会考虑搞个域名什么的吧，现在暂时就用这个。</p>
+<h2 id="2-本地安装"><a href="#2-本地安装" class="headerlink" title="2 本地安装"></a>2 本地安装</h2><p>这部分主要参考的是这篇文章：<a href="https://zouchanglin.github.io/2018/05/08/2018050801/" target="_blank" rel="noopener">Github+hexo+next主题博客搭建教程</a></p>
+<h3 id="2-1-安装Hexo"><a href="#2-1-安装Hexo" class="headerlink" title="2.1 安装Hexo"></a>2.1 安装Hexo</h3><p>Hexo 类似于一个引擎，他可以把我们的 Markdown 文件转换为静态 HTML 文件，这样就算是我这种什么也不懂的小白也可以把自己写的文章变成一个大家都能浏览的网页了。</p>
+<p>而安装 Hexo 首先需要在自己电脑的硬盘上创建一个文件夹，我们把 Hexo 安装到这个文件夹中，包括我们之后安装的主题也好，写的文章也好，保存在博客中的图片也好，都会在这个文件夹中，路径中不要有中文和空格就好。</p>
+<p>然后进入文件夹 <code>右键 - Git Bash Here</code> 调出Git输入命令行的对话框，输入下面的这些命令行就行了，# 后面的内容为注释，不需要输入。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g			#安装Hexo</span><br><span class="line">hexo -v					#查看版本</span><br><span class="line">hexo init				#初始化该文件夹</span><br><span class="line">hexo install				#安装一些组件</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-本地调试"><a href="#2-2-本地调试" class="headerlink" title="2.2 本地调试"></a>2.2 本地调试</h3><p>进入 Hexo 的文件夹 <code>右键 - Git Bash Here</code> 调出 Git 输入命令行的对话框，输入如下命令行，# 后面的内容为注释，不需要输入。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g					#生成静态资源，理解为生成静态网页即可</span><br><span class="line">hexo s					#开启本地服务器，用于本地查看博客效果并进行调试</span><br></pre></td></tr></table></figure>
+<p>执行完 <code>hexo s</code> 后可以通过在浏览器输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>  查看自己 Blog 的状态，知道你按 <code>Ctrl+C</code> 为止，这个网页可以一直观察本地 Blog 的状态，比如在这个状态下更改配置文件的内容后保存，刷新一下就可以看到更改后的状态，非常方便。</p>
+<h2 id="3-关联-Github-仓库"><a href="#3-关联-Github-仓库" class="headerlink" title="3 关联 Github 仓库"></a>3 关联 Github 仓库</h2><p>这部分主要参考的是这篇文章：<a href="https://zouchanglin.github.io/2018/05/08/2018050801/" target="_blank" rel="noopener">Github+hexo+next主题博客搭建教程</a></p>
+<h3 id="3-1-建立-Github-仓库"><a href="#3-1-建立-Github-仓库" class="headerlink" title="3.1 建立 Github 仓库"></a>3.1 建立 Github 仓库</h3><p>登录自己的 Github 账号， Strat a Project ，这里需要注意的一点就是：<strong>仓库名称一定要是 Github用户名.github.io</strong></p>
+<p>其他的不用注意什么，点绿色的按钮完成创建就好，这样就有了一个用于存放 Blog 的仓库。</p>
+<h3 id="3-2-关联本地文件夹与-Github-仓库"><a href="#3-2-关联本地文件夹与-Github-仓库" class="headerlink" title="3.2 关联本地文件夹与  Github 仓库"></a>3.2 关联本地文件夹与  Github 仓库</h3><p>进入 Hexo 的文件夹 <code>右键 - Git Bash Here</code> 调出 Git 输入命令行的对话框，输入如下命令行，# 后面的内容为注释，不需要输入。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"你的Github用户名"</span>					#设置Git的用户名</span><br><span class="line">git config --global user.email <span class="string">"你注册Github使用的邮箱"</span>				#设置Git的E-mail</span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"你注册Github使用的邮箱"</span>					#生成SSH密钥</span><br></pre></td></tr></table></figure>
+<p>之后需要的操作有：直接敲一次回车，输入两次提交代码所需要的密码，出现小星星就算大功告成了。</p>
+<p>然后要去 <code>系统盘/用户/“用户名”/ssh</code> 这个路径找到刚刚生成的 ssh 密钥文件（pub 格式），打开之后把里面的内容复制一下。</p>
+<p>去自己的 Hithub 仓库，找到 Settings 选项，找到 SSH and GPG keys 选项，找到 New SSH key 选项，如果这些选项你都找到了，那就可以开始填表了。</p>
+<p>Title 随便写，尽量不要写中文，Key 把刚刚复制的 ssh 密钥粘贴进来就行了。</p>
+<p>这里会要求输入一次密码，输入完后基本就大功告成了。</p>
+<h3 id="3-3-配置-Deploy"><a href="#3-3-配置-Deploy" class="headerlink" title="3.3 配置 Deploy"></a>3.3 配置 Deploy</h3><p>进入 Blog 文件夹，找到一个名字叫 <code>_config.yml</code> 的文件，这个是整个 Blog 的配置文件，用 Atom 打开它。</p>
+<p>找到关键词 <code>deploy</code> ，进行如下修改。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:你的Github用户名/你的Github用户名.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-4-开始部署"><a href="#3-4-开始部署" class="headerlink" title="3.4 开始部署"></a>3.4 开始部署</h3><p>进入 Hexo 的文件夹 <code>右键 - Git Bash Here</code> 调出 Git 输入命令行的对话框，输入如下命令行，# 后面的内容为注释，不需要输入。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g					#生成静态资源，理解为生成静态网页即可</span><br><span class="line">hexo d					#部署到远程仓库,每次部署需要输入密码</span><br></pre></td></tr></table></figure>
+<p>这个是将本地文件夹部署到 Github 仓库的命令行，通俗的说就是把自己本地的更改同步到 Github 仓库，如果不执行这个命令行的话，不管对本地文件夹进行多少更改，以 Github 仓库为基础的 Blog 是不会发生任何变化的。</p>
+<p>但是，在第一次执行这个命令行的时候可能会遇到一点问题，这个时候需要执行如下命令行。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<p>执行成功后，可以继续执行 <code>hexo d</code> 完成部署，部署的时候需要用到 shh 密钥，首次使用的时候需要输入一个 yes 确认一下，然后再输入设置好的仓库密码即可完成部署。</p>
+<p>完成部署后，在浏览器地址栏输入对应的网址即可查看自己的 Blog 状态，网址格式是：https://你的Github用户名.github.io/</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/01/Hello-World-0/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTY5OS8xODI0NQ=="></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="雾之">
+            
+              <p class="site-author-name" itemprop="name">雾之</p>
+              <p class="site-description motion-element" itemprop="description">雾之的一些胡言乱语</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:dalibo159159@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/dalibo159" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-事前准备"><span class="nav-text">1 事前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git工具"><span class="nav-text">Git工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Atom"><span class="nav-text">Atom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Typora"><span class="nav-text">Typora</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github账号"><span class="nav-text">Github账号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-本地安装"><span class="nav-text">2 本地安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-安装Hexo"><span class="nav-text">2.1 安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-本地调试"><span class="nav-text">2.2 本地调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-关联-Github-仓库"><span class="nav-text">3 关联 Github 仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-建立-Github-仓库"><span class="nav-text">3.1 建立 Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-关联本地文件夹与-Github-仓库"><span class="nav-text">3.2 关联本地文件夹与  Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-配置-Deploy"><span class="nav-text">3.3 配置 Deploy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-开始部署"><span class="nav-text">3.4 开始部署</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-anchor"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">雾之宅落</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("YOQBPOsMVmJjg0PEjg4N0yLw-gzGzoHsz", "c2l5TFMEnYz45ACat6O8u9c0");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
