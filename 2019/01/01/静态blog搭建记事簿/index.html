@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="雾之宅落">
 <meta property="og:description" content="记得之前有人吐槽过每个静态 blog 搭建完都要写一篇如何搭建 blog 的文章，然后就弃坑不再写其他东西了。所以一开始说要写这种文章我是拒绝的。 可是真的折腾这么一圈之后，对于一个没啥编程基础的小白来说涉及的东西太多了，总归还是要找个地方整理记录一下，虽然教程有很多，但基本都做不到完美，每个人有每个人不同的需求，所以还是自己记录一下自己的事情吧。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-01T15:26:57.219Z">
+<meta property="og:updated_time" content="2019-01-01T15:41:13.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="静态blog搭建记事簿">
 <meta name="twitter:description" content="记得之前有人吐槽过每个静态 blog 搭建完都要写一篇如何搭建 blog 的文章，然后就弃坑不再写其他东西了。所以一开始说要写这种文章我是拒绝的。 可是真的折腾这么一圈之后，对于一个没啥编程基础的小白来说涉及的东西太多了，总归还是要找个地方整理记录一下，虽然教程有很多，但基本都做不到完美，每个人有每个人不同的需求，所以还是自己记录一下自己的事情吧。">
@@ -107,7 +107,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -372,7 +372,7 @@
 <h3 id="（1）安装Hexo"><a href="#（1）安装Hexo" class="headerlink" title="（1）安装Hexo"></a>（1）安装Hexo</h3><p>Hexo 类似于一个引擎，他可以把我们的 Markdown 文件转换为静态 HTML 文件，这样就算是我这种什么也不懂的小白也可以把自己写的文章变成一个大家都能浏览的网页了。</p>
 <p>而安装 Hexo 首先需要在自己电脑的硬盘上创建一个文件夹，我们把 Hexo 安装到这个文件夹中，包括我们之后安装的主题也好，写的文章也好，保存在博客中的图片也好，都会在这个文件夹中，路径中不要有中文和空格就好。</p>
 <p>然后进入文件夹 <code>右键 - Git Bash Here</code> 调出Git输入命令行的对话框，输入下面的这些命令行就行了，# 后面的内容为注释，不需要输入。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g			 #安装Hexo</span><br><span class="line">hexo -v						#查看版本</span><br><span class="line">hexo init					#初始化该文件夹</span><br><span class="line">hexo install				#安装一些组件</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g			#安装Hexo</span><br><span class="line">hexo -v					#查看版本</span><br><span class="line">hexo init				#初始化该文件夹</span><br><span class="line">hexo install				#安装一些组件</span><br></pre></td></tr></table></figure>
 <h3 id="（2）本地调试"><a href="#（2）本地调试" class="headerlink" title="（2）本地调试"></a>（2）本地调试</h3><p>进入 Hexo 的文件夹 <code>右键 - Git Bash Here</code> 调出 Git 输入命令行的对话框，输入如下命令行，# 后面的内容为注释，不需要输入。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g					#生成静态资源，理解为生成静态网页即可</span><br><span class="line">hexo s					#开启本地服务器，用于本地查看博客效果并进行调试</span><br></pre></td></tr></table></figure>
 <p>执行完 <code>hexo s</code> 后可以通过在浏览器输入 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>  查看自己 blog 的状态，知道你按 <code>Ctrl+C</code> 为止，这个网页可以一直观察本地 blog 的状态，比如在这个状态下更改配置文件的内容后保存，刷新一下就可以看到更改后的状态，非常方便。</p>
@@ -380,7 +380,7 @@
 <h3 id="（1）建立-Github-仓库"><a href="#（1）建立-Github-仓库" class="headerlink" title="（1）建立 Github 仓库"></a>（1）建立 Github 仓库</h3><p>登录自己的 Github 账号， Strat a Project ，这里需要注意的一点就是：<strong>仓库名称一定要是 Github用户名.github.io</strong></p>
 <p>其他的不用注意什么，点绿色的按钮完成创建就好，这样就有了一个用于存放 blog 的仓库。</p>
 <h3 id="（2）关联本地文件夹与-Github-仓库"><a href="#（2）关联本地文件夹与-Github-仓库" class="headerlink" title="（2）关联本地文件夹与  Github 仓库"></a>（2）关联本地文件夹与  Github 仓库</h3><p>进入 Hexo 的文件夹 <code>右键 - Git Bash Here</code> 调出 Git 输入命令行的对话框，输入如下命令行，# 后面的内容为注释，不需要输入。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"你的Github用户名"</span>							#设置Git的用户名</span><br><span class="line">git config --global user.email <span class="string">"你注册Github使用的邮箱"</span>					  #设置Git的E-mail</span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"你注册Github使用的邮箱"</span>							 #生成SSH密钥</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"你的Github用户名"</span>					#设置Git的用户名</span><br><span class="line">git config --global user.email <span class="string">"你注册Github使用的邮箱"</span>				#设置Git的E-mail</span><br><span class="line">ssh-keygen -t rsa -C <span class="string">"你注册Github使用的邮箱"</span>					#生成SSH密钥</span><br></pre></td></tr></table></figure>
 <p>之后需要的操作有：直接敲一次回车，输入两次提交代码所需要的密码，出现小星星就算大功告成了。</p>
 <p>然后要去 <code>系统盘/用户/“用户名”/ssh</code> 这个路径找到刚刚生成的 ssh 密钥文件（pub 格式），打开之后把里面的内容复制一下。</p>
 <p>去自己的 Hithub 仓库，找到 Settings 选项，找到 SSH and GPG keys 选项，找到 New SSH key 选项，如果这些选项你都找到了，那就可以开始填表了。</p>
@@ -388,12 +388,12 @@
 <p>这里会要求输入一次密码，输入完后基本就大功告成了。</p>
 <h3 id="（3）配置-Deploy"><a href="#（3）配置-Deploy" class="headerlink" title="（3）配置 Deploy"></a>（3）配置 Deploy</h3><p>进入 blog 文件夹，找到一个名字叫 <code>_config.yml</code> 的文件，这个是整个 blog 的配置文件，用 Atom 打开它。</p>
 <p>找到关键词 <code>deploy</code> ，进行如下修改。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line"><span class="attr">  type:</span> <span class="string">git</span></span><br><span class="line"><span class="attr">  repo:</span> <span class="string">git@github.com:你的Github用户名/你的Github用户名.github.io.git</span></span><br><span class="line"><span class="attr">  branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 <h3 id="（4）开始部署"><a href="#（4）开始部署" class="headerlink" title="（4）开始部署"></a>（4）开始部署</h3><p>进入 Hexo 的文件夹 <code>右键 - Git Bash Here</code> 调出 Git 输入命令行的对话框，输入如下命令行，# 后面的内容为注释，不需要输入。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g					#生成静态资源，理解为生成静态网页即可</span><br><span class="line">hexo d					#部署到远程仓库,每次部署需要输入密码</span><br></pre></td></tr></table></figure>
 <p>这个是将本地文件夹部署到 Github 仓库的命令行，通俗的说就是把自己本地的更改同步到 Github 仓库，如果不执行这个命令行的话，不管对本地文件夹进行多少更改，以 Github 仓库为基础的 blog 是不会发生任何变化的。</p>
 <p>但是，在第一次执行这个命令行的时候可能会遇到一点问题，这个时候需要执行如下命令行。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-deployer-git</span><br></pre></td></tr></table></figure>
 <p>执行成功后，可以继续执行 <code>hexo d</code> 完成部署，部署的时候需要用到 shh 密钥，首次使用的时候需要输入一个 yes 确认一下，然后再输入设置好的仓库密码即可完成部署。</p>
 <p>完成部署后，在浏览器地址栏输入对应的网址即可查看自己的 blog 状态，网址格式是：https://你的Github用户名.github.io/</p>
 
