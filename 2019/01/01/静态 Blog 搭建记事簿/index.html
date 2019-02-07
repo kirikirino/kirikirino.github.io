@@ -7,7 +7,7 @@
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
@@ -133,7 +133,8 @@
 <meta property="og:description" content="记得之前有人吐槽过每个静态 Blog 搭建完都要写一篇如何搭建 Blog 的文章，然后就弃坑不再写其他东西了。所以一开始说要写这种文章我是拒绝的。 可是真的折腾这么一圈之后，对于一个没啥编程基础的小白来说涉及的东西太多了，总归还是要找个地方整理记录一下，虽然教程有很多，但基本都做不到完美，每个人有每个人不同的需求，所以还是自己记录一下自己的事情吧。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/01/05/5c30cc440781e.png">
-<meta property="og:updated_time" content="2019-01-15T15:03:10.912Z">
+<meta property="og:image" content="https://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png">
+<meta property="og:updated_time" content="2019-02-07T02:43:27.782Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="静态 Blog 搭建记事簿">
 <meta name="twitter:description" content="记得之前有人吐槽过每个静态 Blog 搭建完都要写一篇如何搭建 Blog 的文章，然后就弃坑不再写其他东西了。所以一开始说要写这种文章我是拒绝的。 可是真的折腾这么一圈之后，对于一个没啥编程基础的小白来说涉及的东西太多了，总归还是要找个地方整理记录一下，虽然教程有很多，但基本都做不到完美，每个人有每个人不同的需求，所以还是自己记录一下自己的事情吧。">
@@ -173,7 +174,7 @@
 
 
 
-  <title>静态 Blog 搭建记事簿 | 雾之宅落</title>
+  <title>静态 Blog 搭建记事簿 | 雾之宅落</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -192,7 +193,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -534,7 +535,25 @@
 <p>注意：要想 NexT 主题的简体中文字体配置生效，站点配置文件中的 language 必须为 zh-Hans。</p>
 <p>然后对于英文字体，因为其字体库很小，所以想要个性化就简单多了。首先去 <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a> 找自己喜欢的英文字体，然后编辑主题配置文件，可以查看一下 <a href="http://theme-next.iissnan.com/theme-settings.html#fonts-customization" target="_blank" rel="noopener">NexT 官方文档</a>。</p>
 </blockquote>
-<h3 id="6-13-Third-Party-Services-Settings"><a href="#6-13-Third-Party-Services-Settings" class="headerlink" title="6.13 Third Party Services Settings"></a>6.13 Third Party Services Settings</h3>
+<h3 id="6-13-Third-Party-Services-Settings"><a href="#6-13-Third-Party-Services-Settings" class="headerlink" title="6.13 Third Party Services Settings"></a>6.13 Third Party Services Settings</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第三方服务设置</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Third Party Services Settings</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br></pre></td></tr></table></figure>
+<p>因为是第三方服务设置，所以下面会分别介绍里面 NexT 集成的第三方服务</p>
+<h4 id="6-13-1-MathJax-Support"><a href="#6-13-1-MathJax-Support" class="headerlink" title="6.13.1 MathJax Support"></a>6.13.1 MathJax Support</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># MathJax Support</span></span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  cdn:</span> <span class="string">//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML</span></span><br></pre></td></tr></table></figure>
+<p>首先关于这个 MathJax ，wiki上写的云里雾里的感觉根本看不懂，实际找了下效果发现这是写公式用的第三方服务，如果有输入数学公式需求的话这个应该很好用。</p>
+<p>开启这个服务首先要安装一个自动部署 MathJax 的<a href="http://link.zhihu.com/?target=http%3A//catx.me/2014/03/09/hexo-mathjax-plugin/" target="_blank" rel="noopener">hexo插件</a> ，进入 Hexo 的文件夹 <code>右键 - Git Bash Here</code> 调出 Git 输入命令行的对话框，输入如下命令行。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-math --save</span><br><span class="line">hexo math install</span><br></pre></td></tr></table></figure>
+<p>安装完之后到主题的配置文件中，将 mathjax 关键词下的 enable 开关打开，这样就可以用 MathJax 来写数学公式了。</p>
+<p>这里有一个需要注意的地方就是，hexo先用<code>marked.js</code>渲染，然后再交给<code>MathJax</code>渲染。在<code>marked.js</code>渲染的时候下划线<code>_</code>是被换成了<code>&lt;em&gt;</code>标签，也就是斜体字，另外 LaTeX 中的<code>\\</code>也会被转义成一个<code>\</code>，这样会导致<code>MathJax</code>渲染时不认为它是一个换行符了。</p>
+<p>这个问题有暴力一些的解决办法，可以参考这篇文章 <a href="https://zhuanlan.zhihu.com/p/33857596" target="_blank" rel="noopener">Hexo博客使用MathJax公式并解决Markdown渲染冲突问题</a> 。</p>
+<p>这个问题也有温和一些的解决办法，那就是在markdown中使用 MathJax 时，把下标<code>_</code>写成<code>\_</code> 。</p>
+<p>关于 MathJax 的基本语法，可以参考这篇文章<a href="http://wangwlj.com/2017/10/08/mathjax_basic/" target="_blank" rel="noopener">MathJax(Markdown中的公式)的基本使用语法</a> 。</p>
+<h4 id="6-13-2-汉字标准格式"><a href="#6-13-2-汉字标准格式" class="headerlink" title="6.13.2 汉字标准格式"></a>6.13.2 汉字标准格式</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Han Support docs: https://hanzi.pro/</span></span><br><span class="line"><span class="attr">han:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>汉字标准格式，改变你文字的排版，这个看个人喜好吧，效果的话可以看下这个页面：<a href="https://thetype.com/2015/05/9230/" target="_blank" rel="noopener">用印刷品的态度来做 Web 排版</a> </p>
+<h4 id="6-13-3-Swiftype-站内搜索"><a href="#6-13-3-Swiftype-站内搜索" class="headerlink" title="6.13.3 Swiftype 站内搜索"></a>6.13.3 Swiftype 站内搜索</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Swiftype Search API Key</span></span><br><span class="line"><span class="comment">#swiftype_key:</span></span><br></pre></td></tr></table></figure>
+<p>一个站内搜索的第三方支持，本来想弄来着结果发现网站改版现在只能免费试用14天，还是算了……</p>
+<h4 id="6-13-4-百度统计"><a href="#6-13-4-百度统计" class="headerlink" title="6.13.4 百度统计"></a>6.13.4 百度统计</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Baidu Analytics ID</span></span><br><span class="line"><span class="comment"># 若要开启使用记得去掉 “#” ，baidu_analytics获取方法见下文</span></span><br><span class="line"><span class="comment">#baidu_analytics:</span></span><br></pre></td></tr></table></figure>
+<p>功能如字面意思就是百度家提供的统计服务，配置方法首先登录 <a href="http://tongji.baidu.com/" target="_blank" rel="noopener">百度统计</a>，定位到站点的代码获取页面，然后复制 <code>hm.js?</code> 后面那串统计脚本 id，如下图：<br><img src="https://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png" alt="img"></p>
+<h4 id="6-13-5-第三方评论"><a href="#6-13-5-第三方评论" class="headerlink" title="6.13.5 第三方评论"></a>6.13.5 第三方评论</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 多说，已经关闭服务</span></span><br><span class="line"><span class="comment"># Duoshuo ShortName</span></span><br><span class="line"><span class="comment">#duoshuo_shortname:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Disqus，老牌评论服务，功能强大，已被墙</span></span><br><span class="line"><span class="comment"># Disqus</span></span><br><span class="line"><span class="attr">disqus:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  shortname:</span></span><br><span class="line"><span class="attr">  count:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Hypercomments，只能使用google账号登录</span></span><br><span class="line"><span class="comment"># Hypercomments</span></span><br><span class="line"><span class="comment">#hypercomments_id:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 畅言，搜狐旗下的评论服务，需要网站备案</span></span><br><span class="line"><span class="comment"># changyan</span></span><br><span class="line"><span class="attr">changyan:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  appid:</span></span><br><span class="line"><span class="attr">  appkey:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Valine，基于 LeanCloud 的一款极简风格第三方评论服务</span></span><br><span class="line"><span class="comment"># Valine.</span></span><br><span class="line"><span class="comment"># You can get your appid and appkey from https://leancloud.cn</span></span><br><span class="line"><span class="comment"># more info please open https://valine.js.org</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  appid:</span>  <span class="comment"># your leancloud application appid</span></span><br><span class="line"><span class="attr">  appkey:</span>  <span class="comment"># your leancloud application appkey</span></span><br><span class="line"><span class="attr">  notify:</span> <span class="literal">false</span> <span class="comment"># mail notifier , https://github.com/xCss/Valine/wiki</span></span><br><span class="line"><span class="attr">  verify:</span> <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line"><span class="attr">  placeholder:</span> <span class="string">Just</span> <span class="string">go</span> <span class="string">go</span> <span class="comment"># comment box placeholder</span></span><br><span class="line"><span class="attr">  avatar:</span> <span class="string">mm</span> <span class="comment"># gravatar style</span></span><br><span class="line"><span class="attr">  guest_info:</span> <span class="string">nick,mail,link</span> <span class="comment"># custom comment header</span></span><br><span class="line"><span class="attr">  pageSize:</span> <span class="number">10</span> <span class="comment"># pagination size</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 友言，已经关闭服务</span></span><br><span class="line"><span class="comment"># Support for youyan comments system.</span></span><br><span class="line"><span class="comment"># You can get your uid from http://www.uyan.cc</span></span><br><span class="line"><span class="comment">#youyan_uid: your uid</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 来必力，我现在在用的第三方评论服务</span></span><br><span class="line"><span class="comment"># Support for LiveRe comments system.</span></span><br><span class="line"><span class="comment"># You can get your uid from https://livere.com/insight/myCode (General web site)</span></span><br><span class="line"><span class="attr">livere_uid:</span> <span class="string">■■■■■■■■■■■■■■■■■■■■■■■■■■■</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gitment，只支持github登陆</span></span><br><span class="line"><span class="comment"># Gitment</span></span><br><span class="line"><span class="comment"># Introduction: https://imsun.net/posts/gitment-introduction/</span></span><br><span class="line"><span class="comment"># You can get your Github ID from https://api.github.com/users/&lt;Github username&gt;</span></span><br><span class="line"><span class="attr">gitment:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  mint:</span> <span class="literal">true</span> <span class="comment"># RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway</span></span><br><span class="line"><span class="attr">  count:</span> <span class="literal">true</span> <span class="comment"># Show comments count in post meta area</span></span><br><span class="line"><span class="attr">  lazy:</span> <span class="literal">false</span> <span class="comment"># Comments lazy loading with a button</span></span><br><span class="line"><span class="attr">  cleanly:</span> <span class="literal">false</span> <span class="comment"># Hide 'Powered by ...' on footer, and more</span></span><br><span class="line"><span class="attr">  language:</span> <span class="comment"># Force language, or auto switch by theme</span></span><br><span class="line"><span class="attr">  github_user:</span> <span class="comment"># MUST HAVE, Your Github ID</span></span><br><span class="line"><span class="attr">  github_repo:</span> <span class="comment"># MUST HAVE, The repo you use to store Gitment comments</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="comment"># MUST HAVE, Github client id for the Gitment</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="comment"># EITHER this or proxy_gateway, Github access secret token for the Gitment</span></span><br><span class="line"><span class="attr">  proxy_gateway:</span> <span class="comment"># Address of api proxy, See: https://github.com/aimingoo/intersect</span></span><br><span class="line"><span class="attr">  redirect_protocol:</span> <span class="comment"># Protocol of redirect_uri with force_redirect_protocol when mint enabled</span></span><br></pre></td></tr></table></figure>
+<h4 id="6-13-6-第三方分享"><a href="#6-13-6-第三方分享" class="headerlink" title="6.13.6 第三方分享"></a>6.13.6 第三方分享</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 百度家的分享服务，不支持 https</span></span><br><span class="line"><span class="comment"># Baidu Share</span></span><br><span class="line"><span class="comment"># Available value:</span></span><br><span class="line"><span class="comment">#    button | slide</span></span><br><span class="line"><span class="comment"># Warning: Baidu Share does not support https.</span></span><br><span class="line"><span class="comment">#baidushare:</span></span><br><span class="line"><span class="comment">##  type: button</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># JiaThis，服务已关闭</span></span><br><span class="line"><span class="comment"># Share</span></span><br><span class="line"><span class="comment"># This plugin is more useful in China, make sure you known how to use it.</span></span><br><span class="line"><span class="comment"># And you can find the use guide at official webiste: http://www.jiathis.com/.</span></span><br><span class="line"><span class="comment"># Warning: JiaThis does not support https.</span></span><br><span class="line"><span class="comment">#jiathis:</span></span><br><span class="line">  <span class="comment">##uid: Get this uid from http://www.jiathis.com/</span></span><br><span class="line"><span class="comment">#add_this_id:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 多说家的分享服务，多说已关闭服务</span></span><br><span class="line"><span class="comment"># Share</span></span><br><span class="line"><span class="comment">#duoshuo_share: true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># NeedMoreShare2,适合国内环境使用的分享服务</span></span><br><span class="line"><span class="comment"># NeedMoreShare2</span></span><br><span class="line"><span class="comment"># This plugin is a pure javascript sharing lib which is useful in China.</span></span><br><span class="line"><span class="comment"># See: https://github.com/revir/need-more-share2</span></span><br><span class="line"><span class="comment"># Also see: https://github.com/DzmVasileusky/needShareButton</span></span><br><span class="line"><span class="comment"># iconStyle: default | box</span></span><br><span class="line"><span class="comment"># boxForm: horizontal | vertical</span></span><br><span class="line"><span class="comment"># position: top / middle / bottom + Left / Center / Right</span></span><br><span class="line"><span class="comment"># networks: Weibo,Wechat,Douban,QQZone,Twitter,Linkedin,Mailto,Reddit,</span></span><br><span class="line"><span class="comment">#           Delicious,StumbleUpon,Pinterest,Facebook,GooglePlus,Slashdot,</span></span><br><span class="line"><span class="comment">#           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,</span></span><br><span class="line"><span class="comment">#           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru</span></span><br><span class="line"><span class="attr">needmoreshare2:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  postbottom:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    options:</span></span><br><span class="line"><span class="attr">      iconStyle:</span> <span class="string">box</span></span><br><span class="line"><span class="attr">      boxForm:</span> <span class="string">horizontal</span></span><br><span class="line"><span class="attr">      position:</span> <span class="string">bottomCenter</span></span><br><span class="line"><span class="attr">      networks:</span> <span class="string">Weibo,Wechat,Douban,QQZone,Twitter,Facebook</span></span><br><span class="line"><span class="attr">  float:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    options:</span></span><br><span class="line"><span class="attr">      iconStyle:</span> <span class="string">box</span></span><br><span class="line"><span class="attr">      boxForm:</span> <span class="string">horizontal</span></span><br><span class="line"><span class="attr">      position:</span> <span class="string">middleRight</span></span><br><span class="line"><span class="attr">      networks:</span> <span class="string">Weibo,Wechat,Douban,QQZone,Twitter,Facebook</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -558,10 +577,25 @@
 
       
       
+        <div class=" post-widgets"="">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </i></a></div>
+      
       
 
       
-        <div class=" post-nav"="">
+        <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
               <a href="/2019/01/01/Hello-World-0/" rel="next" title="Hello World">
@@ -575,7 +609,7 @@
           <div class="post-nav-prev post-nav-item">
             
           </div>
-        </i></a></div>
+        </div>
       
 
       
@@ -751,7 +785,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-事前准备"><span class="nav-text">1 事前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git工具"><span class="nav-text">Git工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Atom"><span class="nav-text">Atom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Typora"><span class="nav-text">Typora</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github账号"><span class="nav-text">Github账号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-本地安装"><span class="nav-text">2 本地安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-安装Hexo"><span class="nav-text">2.1 安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-本地调试"><span class="nav-text">2.2 本地调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-关联-Github-仓库"><span class="nav-text">3 关联 Github 仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-建立-Github-仓库"><span class="nav-text">3.1 建立 Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-关联本地文件夹与-Github-仓库"><span class="nav-text">3.2 关联本地文件夹与  Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-配置-Deploy"><span class="nav-text">3.3 配置 Deploy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-开始部署"><span class="nav-text">3.4 开始部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Blog-配置文件设置"><span class="nav-text">4 Blog 配置文件设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-认识-Blog-配置文件"><span class="nav-text">4.1  认识 Blog 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-Site-标签"><span class="nav-text">4.2 Site 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-URL-标签"><span class="nav-text">4.3 URL 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-Writing-标签"><span class="nav-text">4.4 Writing 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-Home-page-setting-标签"><span class="nav-text">4.5  Home page setting 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-Category-amp-Tag-标签"><span class="nav-text">4.6 Category &amp; Tag 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-Date-Time-format-标签"><span class="nav-text">4.7 Date / Time format 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-Pagination-标签"><span class="nav-text">4.8 Pagination 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-Extensions-标签"><span class="nav-text">4.9 Extensions 标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-主题安装"><span class="nav-text">5 主题安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-安装-NexT"><span class="nav-text">5.1  安装 NexT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-启用-NexT"><span class="nav-text">5.2 启用 NexT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-NexT-配置文件设置"><span class="nav-text">6 NexT 配置文件设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-认识-NexT-配置文件"><span class="nav-text">6.1  认识 NexT 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-override-开关"><span class="nav-text">6.2 override 开关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-favicon-标签"><span class="nav-text">6.3  favicon 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-keywords-标签"><span class="nav-text">6.4  keywords 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-footer-标签"><span class="nav-text">6.5 footer 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6-SEO-Settings"><span class="nav-text">6.6 SEO Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-7-Menu-Settings"><span class="nav-text">6.7 Menu Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-8-Scheme-Settings"><span class="nav-text">6.8 Scheme Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-9-Sidebar-Settings"><span class="nav-text">6.9 Sidebar Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-10-Post-Settings"><span class="nav-text">6.10 Post Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-11-Misc-Theme-Settings"><span class="nav-text">6.11 Misc Theme Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-12-Font-Settings"><span class="nav-text">6.12 Font Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-13-Third-Party-Services-Settings"><span class="nav-text">6.13 Third Party Services Settings</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-事前准备"><span class="nav-text">1 事前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git工具"><span class="nav-text">Git工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Atom"><span class="nav-text">Atom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Typora"><span class="nav-text">Typora</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github账号"><span class="nav-text">Github账号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-本地安装"><span class="nav-text">2 本地安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-安装Hexo"><span class="nav-text">2.1 安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-本地调试"><span class="nav-text">2.2 本地调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-关联-Github-仓库"><span class="nav-text">3 关联 Github 仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-建立-Github-仓库"><span class="nav-text">3.1 建立 Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-关联本地文件夹与-Github-仓库"><span class="nav-text">3.2 关联本地文件夹与  Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-配置-Deploy"><span class="nav-text">3.3 配置 Deploy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-开始部署"><span class="nav-text">3.4 开始部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Blog-配置文件设置"><span class="nav-text">4 Blog 配置文件设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-认识-Blog-配置文件"><span class="nav-text">4.1  认识 Blog 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-Site-标签"><span class="nav-text">4.2 Site 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-URL-标签"><span class="nav-text">4.3 URL 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-Writing-标签"><span class="nav-text">4.4 Writing 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-Home-page-setting-标签"><span class="nav-text">4.5  Home page setting 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-Category-amp-Tag-标签"><span class="nav-text">4.6 Category &amp; Tag 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-Date-Time-format-标签"><span class="nav-text">4.7 Date / Time format 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-Pagination-标签"><span class="nav-text">4.8 Pagination 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-Extensions-标签"><span class="nav-text">4.9 Extensions 标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-主题安装"><span class="nav-text">5 主题安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-安装-NexT"><span class="nav-text">5.1  安装 NexT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-启用-NexT"><span class="nav-text">5.2 启用 NexT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-NexT-配置文件设置"><span class="nav-text">6 NexT 配置文件设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-认识-NexT-配置文件"><span class="nav-text">6.1  认识 NexT 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-override-开关"><span class="nav-text">6.2 override 开关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-favicon-标签"><span class="nav-text">6.3  favicon 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-keywords-标签"><span class="nav-text">6.4  keywords 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-footer-标签"><span class="nav-text">6.5 footer 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6-SEO-Settings"><span class="nav-text">6.6 SEO Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-7-Menu-Settings"><span class="nav-text">6.7 Menu Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-8-Scheme-Settings"><span class="nav-text">6.8 Scheme Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-9-Sidebar-Settings"><span class="nav-text">6.9 Sidebar Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-10-Post-Settings"><span class="nav-text">6.10 Post Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-11-Misc-Theme-Settings"><span class="nav-text">6.11 Misc Theme Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-12-Font-Settings"><span class="nav-text">6.12 Font Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-13-Third-Party-Services-Settings"><span class="nav-text">6.13 Third Party Services Settings</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-1-MathJax-Support"><span class="nav-text">6.13.1 MathJax Support</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-2-汉字标准格式"><span class="nav-text">6.13.2 汉字标准格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-3-Swiftype-站内搜索"><span class="nav-text">6.13.3 Swiftype 站内搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-4-百度统计"><span class="nav-text">6.13.4 百度统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-5-第三方评论"><span class="nav-text">6.13.5 第三方评论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-6-第三方分享"><span class="nav-text">6.13.6 第三方分享</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -809,6 +843,12 @@
       </div>
     
 
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
     
 
   </div>
@@ -1063,8 +1103,67 @@
 
   
   
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
 
   
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
 
   
 
