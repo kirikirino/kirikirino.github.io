@@ -134,7 +134,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2019/01/05/5c30cc440781e.png">
 <meta property="og:image" content="https://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png">
-<meta property="og:updated_time" content="2019-02-07T02:43:27.782Z">
+<meta property="og:updated_time" content="2019-02-08T03:37:54.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="静态 Blog 搭建记事簿">
 <meta name="twitter:description" content="记得之前有人吐槽过每个静态 Blog 搭建完都要写一篇如何搭建 Blog 的文章，然后就弃坑不再写其他东西了。所以一开始说要写这种文章我是拒绝的。 可是真的折腾这么一圈之后，对于一个没啥编程基础的小白来说涉及的东西太多了，总归还是要找个地方整理记录一下，虽然教程有很多，但基本都做不到完美，每个人有每个人不同的需求，所以还是自己记录一下自己的事情吧。">
@@ -174,11 +174,20 @@
 
 
 
-  <title>静态 Blog 搭建记事簿 | 雾之宅落</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>静态 Blog 搭建记事簿 | 雾之宅落</title>
   
 
 
 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-134047404-1', 'auto');
+  ga('send', 'pageview');
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
 
@@ -280,9 +289,41 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -553,7 +594,12 @@
 <h4 id="6-13-4-百度统计"><a href="#6-13-4-百度统计" class="headerlink" title="6.13.4 百度统计"></a>6.13.4 百度统计</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Baidu Analytics ID</span></span><br><span class="line"><span class="comment"># 若要开启使用记得去掉 “#” ，baidu_analytics获取方法见下文</span></span><br><span class="line"><span class="comment">#baidu_analytics:</span></span><br></pre></td></tr></table></figure>
 <p>功能如字面意思就是百度家提供的统计服务，配置方法首先登录 <a href="http://tongji.baidu.com/" target="_blank" rel="noopener">百度统计</a>，定位到站点的代码获取页面，然后复制 <code>hm.js?</code> 后面那串统计脚本 id，如下图：<br><img src="https://theme-next.iissnan.com/uploads/five-minutes-setup/analytics-baidu-id.png" alt="img"></p>
 <h4 id="6-13-5-第三方评论"><a href="#6-13-5-第三方评论" class="headerlink" title="6.13.5 第三方评论"></a>6.13.5 第三方评论</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 多说，已经关闭服务</span></span><br><span class="line"><span class="comment"># Duoshuo ShortName</span></span><br><span class="line"><span class="comment">#duoshuo_shortname:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Disqus，老牌评论服务，功能强大，已被墙</span></span><br><span class="line"><span class="comment"># Disqus</span></span><br><span class="line"><span class="attr">disqus:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  shortname:</span></span><br><span class="line"><span class="attr">  count:</span> <span class="literal">true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Hypercomments，只能使用google账号登录</span></span><br><span class="line"><span class="comment"># Hypercomments</span></span><br><span class="line"><span class="comment">#hypercomments_id:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 畅言，搜狐旗下的评论服务，需要网站备案</span></span><br><span class="line"><span class="comment"># changyan</span></span><br><span class="line"><span class="attr">changyan:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  appid:</span></span><br><span class="line"><span class="attr">  appkey:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Valine，基于 LeanCloud 的一款极简风格第三方评论服务</span></span><br><span class="line"><span class="comment"># Valine.</span></span><br><span class="line"><span class="comment"># You can get your appid and appkey from https://leancloud.cn</span></span><br><span class="line"><span class="comment"># more info please open https://valine.js.org</span></span><br><span class="line"><span class="attr">valine:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  appid:</span>  <span class="comment"># your leancloud application appid</span></span><br><span class="line"><span class="attr">  appkey:</span>  <span class="comment"># your leancloud application appkey</span></span><br><span class="line"><span class="attr">  notify:</span> <span class="literal">false</span> <span class="comment"># mail notifier , https://github.com/xCss/Valine/wiki</span></span><br><span class="line"><span class="attr">  verify:</span> <span class="literal">false</span> <span class="comment"># Verification code</span></span><br><span class="line"><span class="attr">  placeholder:</span> <span class="string">Just</span> <span class="string">go</span> <span class="string">go</span> <span class="comment"># comment box placeholder</span></span><br><span class="line"><span class="attr">  avatar:</span> <span class="string">mm</span> <span class="comment"># gravatar style</span></span><br><span class="line"><span class="attr">  guest_info:</span> <span class="string">nick,mail,link</span> <span class="comment"># custom comment header</span></span><br><span class="line"><span class="attr">  pageSize:</span> <span class="number">10</span> <span class="comment"># pagination size</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 友言，已经关闭服务</span></span><br><span class="line"><span class="comment"># Support for youyan comments system.</span></span><br><span class="line"><span class="comment"># You can get your uid from http://www.uyan.cc</span></span><br><span class="line"><span class="comment">#youyan_uid: your uid</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 来必力，我现在在用的第三方评论服务</span></span><br><span class="line"><span class="comment"># Support for LiveRe comments system.</span></span><br><span class="line"><span class="comment"># You can get your uid from https://livere.com/insight/myCode (General web site)</span></span><br><span class="line"><span class="attr">livere_uid:</span> <span class="string">■■■■■■■■■■■■■■■■■■■■■■■■■■■</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Gitment，只支持github登陆</span></span><br><span class="line"><span class="comment"># Gitment</span></span><br><span class="line"><span class="comment"># Introduction: https://imsun.net/posts/gitment-introduction/</span></span><br><span class="line"><span class="comment"># You can get your Github ID from https://api.github.com/users/&lt;Github username&gt;</span></span><br><span class="line"><span class="attr">gitment:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  mint:</span> <span class="literal">true</span> <span class="comment"># RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway</span></span><br><span class="line"><span class="attr">  count:</span> <span class="literal">true</span> <span class="comment"># Show comments count in post meta area</span></span><br><span class="line"><span class="attr">  lazy:</span> <span class="literal">false</span> <span class="comment"># Comments lazy loading with a button</span></span><br><span class="line"><span class="attr">  cleanly:</span> <span class="literal">false</span> <span class="comment"># Hide 'Powered by ...' on footer, and more</span></span><br><span class="line"><span class="attr">  language:</span> <span class="comment"># Force language, or auto switch by theme</span></span><br><span class="line"><span class="attr">  github_user:</span> <span class="comment"># MUST HAVE, Your Github ID</span></span><br><span class="line"><span class="attr">  github_repo:</span> <span class="comment"># MUST HAVE, The repo you use to store Gitment comments</span></span><br><span class="line"><span class="attr">  client_id:</span> <span class="comment"># MUST HAVE, Github client id for the Gitment</span></span><br><span class="line"><span class="attr">  client_secret:</span> <span class="comment"># EITHER this or proxy_gateway, Github access secret token for the Gitment</span></span><br><span class="line"><span class="attr">  proxy_gateway:</span> <span class="comment"># Address of api proxy, See: https://github.com/aimingoo/intersect</span></span><br><span class="line"><span class="attr">  redirect_protocol:</span> <span class="comment"># Protocol of redirect_uri with force_redirect_protocol when mint enabled</span></span><br></pre></td></tr></table></figure>
-<h4 id="6-13-6-第三方分享"><a href="#6-13-6-第三方分享" class="headerlink" title="6.13.6 第三方分享"></a>6.13.6 第三方分享</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 百度家的分享服务，不支持 https</span></span><br><span class="line"><span class="comment"># Baidu Share</span></span><br><span class="line"><span class="comment"># Available value:</span></span><br><span class="line"><span class="comment">#    button | slide</span></span><br><span class="line"><span class="comment"># Warning: Baidu Share does not support https.</span></span><br><span class="line"><span class="comment">#baidushare:</span></span><br><span class="line"><span class="comment">##  type: button</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># JiaThis，服务已关闭</span></span><br><span class="line"><span class="comment"># Share</span></span><br><span class="line"><span class="comment"># This plugin is more useful in China, make sure you known how to use it.</span></span><br><span class="line"><span class="comment"># And you can find the use guide at official webiste: http://www.jiathis.com/.</span></span><br><span class="line"><span class="comment"># Warning: JiaThis does not support https.</span></span><br><span class="line"><span class="comment">#jiathis:</span></span><br><span class="line">  <span class="comment">##uid: Get this uid from http://www.jiathis.com/</span></span><br><span class="line"><span class="comment">#add_this_id:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 多说家的分享服务，多说已关闭服务</span></span><br><span class="line"><span class="comment"># Share</span></span><br><span class="line"><span class="comment">#duoshuo_share: true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># NeedMoreShare2,适合国内环境使用的分享服务</span></span><br><span class="line"><span class="comment"># NeedMoreShare2</span></span><br><span class="line"><span class="comment"># This plugin is a pure javascript sharing lib which is useful in China.</span></span><br><span class="line"><span class="comment"># See: https://github.com/revir/need-more-share2</span></span><br><span class="line"><span class="comment"># Also see: https://github.com/DzmVasileusky/needShareButton</span></span><br><span class="line"><span class="comment"># iconStyle: default | box</span></span><br><span class="line"><span class="comment"># boxForm: horizontal | vertical</span></span><br><span class="line"><span class="comment"># position: top / middle / bottom + Left / Center / Right</span></span><br><span class="line"><span class="comment"># networks: Weibo,Wechat,Douban,QQZone,Twitter,Linkedin,Mailto,Reddit,</span></span><br><span class="line"><span class="comment">#           Delicious,StumbleUpon,Pinterest,Facebook,GooglePlus,Slashdot,</span></span><br><span class="line"><span class="comment">#           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,</span></span><br><span class="line"><span class="comment">#           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru</span></span><br><span class="line"><span class="attr">needmoreshare2:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  postbottom:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    options:</span></span><br><span class="line"><span class="attr">      iconStyle:</span> <span class="string">box</span></span><br><span class="line"><span class="attr">      boxForm:</span> <span class="string">horizontal</span></span><br><span class="line"><span class="attr">      position:</span> <span class="string">bottomCenter</span></span><br><span class="line"><span class="attr">      networks:</span> <span class="string">Weibo,Wechat,Douban,QQZone,Twitter,Facebook</span></span><br><span class="line"><span class="attr">  float:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    options:</span></span><br><span class="line"><span class="attr">      iconStyle:</span> <span class="string">box</span></span><br><span class="line"><span class="attr">      boxForm:</span> <span class="string">horizontal</span></span><br><span class="line"><span class="attr">      position:</span> <span class="string">middleRight</span></span><br><span class="line"><span class="attr">      networks:</span> <span class="string">Weibo,Wechat,Douban,QQZone,Twitter,Facebook</span></span><br></pre></td></tr></table></figure>
+<h4 id="6-13-6-第三方分享"><a href="#6-13-6-第三方分享" class="headerlink" title="6.13.6 第三方分享"></a>6.13.6 第三方分享</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 百度家的分享服务，不支持 https</span></span><br><span class="line"><span class="comment"># Baidu Share</span></span><br><span class="line"><span class="comment"># Available value:</span></span><br><span class="line"><span class="comment">#    button | slide</span></span><br><span class="line"><span class="comment"># Warning: Baidu Share does not support https.</span></span><br><span class="line"><span class="comment">#baidushare:</span></span><br><span class="line"><span class="comment">##  type: button</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># JiaThis，服务已关闭</span></span><br><span class="line"><span class="comment"># Share</span></span><br><span class="line"><span class="comment"># This plugin is more useful in China, make sure you known how to use it.</span></span><br><span class="line"><span class="comment"># And you can find the use guide at official webiste: http://www.jiathis.com/.</span></span><br><span class="line"><span class="comment"># Warning: JiaThis does not support https.</span></span><br><span class="line"><span class="comment">#jiathis:</span></span><br><span class="line">  <span class="comment">##uid: Get this uid from http://www.jiathis.com/</span></span><br><span class="line"><span class="comment">#add_this_id:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 多说家的分享服务，多说已关闭服务</span></span><br><span class="line"><span class="comment"># Share</span></span><br><span class="line"><span class="comment">#duoshuo_share: true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># NeedMoreShare2,适合国内环境使用的分享服务</span></span><br><span class="line"><span class="comment"># 启用前需要在 Hexo 下运行如下命令</span></span><br><span class="line"><span class="comment"># git clone https://github.com/theme-next/theme-next-needmoreshare2 source/lib/needsharebutton</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># NeedMoreShare2</span></span><br><span class="line"><span class="comment"># This plugin is a pure javascript sharing lib which is useful in China.</span></span><br><span class="line"><span class="comment"># See: https://github.com/revir/need-more-share2</span></span><br><span class="line"><span class="comment"># Also see: https://github.com/DzmVasileusky/needShareButton</span></span><br><span class="line"><span class="comment"># iconStyle: default | box</span></span><br><span class="line"><span class="comment"># boxForm: horizontal | vertical</span></span><br><span class="line"><span class="comment"># position: top / middle / bottom + Left / Center / Right</span></span><br><span class="line"><span class="comment"># networks: Weibo,Wechat,Douban,QQZone,Twitter,Linkedin,Mailto,Reddit,</span></span><br><span class="line"><span class="comment">#           Delicious,StumbleUpon,Pinterest,Facebook,GooglePlus,Slashdot,</span></span><br><span class="line"><span class="comment">#           Technorati,Posterous,Tumblr,GoogleBookmarks,Newsvine,</span></span><br><span class="line"><span class="comment">#           Evernote,Friendfeed,Vkontakte,Odnoklassniki,Mailru</span></span><br><span class="line"><span class="attr">needmoreshare2:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  postbottom:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">    options:</span></span><br><span class="line"><span class="attr">      iconStyle:</span> <span class="string">box</span></span><br><span class="line"><span class="attr">      boxForm:</span> <span class="string">horizontal</span></span><br><span class="line"><span class="attr">      position:</span> <span class="string">bottomCenter</span></span><br><span class="line"><span class="attr">      networks:</span> <span class="string">Weibo,Wechat,Douban,QQZone,Twitter,Facebook</span></span><br><span class="line"><span class="attr">  float:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">    options:</span></span><br><span class="line"><span class="attr">      iconStyle:</span> <span class="string">box</span></span><br><span class="line"><span class="attr">      boxForm:</span> <span class="string">horizontal</span></span><br><span class="line"><span class="attr">      position:</span> <span class="string">middleRight</span></span><br><span class="line"><span class="attr">      networks:</span> <span class="string">Weibo,Wechat,Douban,QQZone,Twitter,Facebook</span></span><br></pre></td></tr></table></figure>
+<h4 id="6-13-7-站长工具"><a href="#6-13-7-站长工具" class="headerlink" title="6.13.7 站长工具"></a>6.13.7 站长工具</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># google 站长工具</span></span><br><span class="line"><span class="comment"># Google Webmaster tools verification setting</span></span><br><span class="line"><span class="comment"># See: https://www.google.com/webmasters/</span></span><br><span class="line"><span class="comment">#google_site_verification:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># google Analytics，和上面的功能类似</span></span><br><span class="line"><span class="comment"># Google Analytics</span></span><br><span class="line"><span class="attr">google_analytics:</span> <span class="string">■■■■■■■■■■■■■■■■■■■■</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Bing 站长工具</span></span><br><span class="line"><span class="comment"># Bing Webmaster tools verification setting</span></span><br><span class="line"><span class="comment"># See: https://www.bing.com/webmaster/</span></span><br><span class="line"><span class="comment">#bing_site_verification:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Yandex 站长工具</span></span><br><span class="line"><span class="comment"># Yandex Webmaster tools verification setting</span></span><br><span class="line"><span class="comment"># See: https://webmaster.yandex.ru/</span></span><br><span class="line"><span class="comment">#yandex_site_verification:</span></span><br></pre></td></tr></table></figure>
+<p>站长工具校验，我用的是第二套方案（ google 家的），去 <a href="https://analytics.google.com" target="_blank" rel="noopener">这里</a> 注册后，将跟踪 ID 复制到对应的位置就可以使用了（记得去掉前面的 “#” ）。</p>
+<h4 id="6-13-8-其他第三方服务"><a href="#6-13-8-其他第三方服务" class="headerlink" title="6.13.8 其他第三方服务"></a>6.13.8 其他第三方服务</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 流量统计，对于站点流量我不是特别需要，文章的阅读量下面有其他的解决方案</span></span><br><span class="line"><span class="comment"># CNZZ count</span></span><br><span class="line"><span class="comment">#cnzz_siteid:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这个不知道是什么，有兴趣的可以看下下面这个链接的介绍</span></span><br><span class="line"><span class="comment"># Application Insights</span></span><br><span class="line"><span class="comment"># See https://azure.microsoft.com/en-us/services/application-insights/</span></span><br><span class="line"><span class="comment"># application_insights:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 多说服务已关闭</span></span><br><span class="line"><span class="comment"># Make duoshuo show UA</span></span><br><span class="line"><span class="comment"># user_id must NOT be null when admin_enable is true!</span></span><br><span class="line"><span class="comment"># you can visit http://dev.duoshuo.com get duoshuo user id.</span></span><br><span class="line"><span class="attr">duoshuo_info:</span></span><br><span class="line"><span class="attr">  ua_enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  admin_enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  user_id:</span> <span class="number">0</span></span><br><span class="line">  <span class="comment">#admin_nickname: Author</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-14-Post-widgets-amp-FB-VK-comments-settings"><a href="#6-14-Post-widgets-amp-FB-VK-comments-settings" class="headerlink" title="6.14 Post widgets &amp; FB/VK comments settings"></a>6.14 Post widgets &amp; FB/VK comments settings</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 发布小部件， Facebook 和 VKontakte 评论设置</span></span><br><span class="line"><span class="comment"># Post widgets &amp; FB/VK comments settings.</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Facebook SDK，作为外行我只觉得这个能在文章标题下增加两个 Facebook 按钮（分享和点赞）</span></span><br><span class="line"><span class="comment"># Facebook SDK Support.</span></span><br><span class="line"><span class="comment"># https://github.com/iissnan/hexo-theme-next/pull/410</span></span><br><span class="line"><span class="attr">facebook_sdk:</span></span><br><span class="line"><span class="attr">  enable:</span>       <span class="literal">false</span></span><br><span class="line"><span class="attr">  app_id:</span>       <span class="comment">#&lt;app_id&gt;</span></span><br><span class="line"><span class="attr">  fb_admin:</span>     <span class="comment">#&lt;user_id&gt;</span></span><br><span class="line"><span class="attr">  like_button:</span>  <span class="comment">#true</span></span><br><span class="line"><span class="attr">  webmaster:</span>    <span class="comment">#true</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Facebook 评论插件，如果要启用这个就要开启上面的 Facebook SDK</span></span><br><span class="line"><span class="comment"># Facebook comments plugin</span></span><br><span class="line"><span class="comment"># This plugin depends on Facebook SDK.</span></span><br><span class="line"><span class="comment"># If facebook_sdk.enable is false, Facebook comments plugin is unavailable.</span></span><br><span class="line"><span class="attr">facebook_comments_plugin:</span></span><br><span class="line"><span class="attr">  enable:</span>       <span class="literal">false</span></span><br><span class="line"><span class="attr">  num_of_posts:</span> <span class="number">10</span>    <span class="comment"># min posts num is 1</span></span><br><span class="line"><span class="attr">  width:</span>        <span class="number">100</span><span class="string">%</span>  <span class="comment"># default width is 550px</span></span><br><span class="line"><span class="attr">  scheme:</span>       <span class="string">light</span> <span class="comment"># default scheme is light (light or dark)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># VKontakte API，不知道这个网站的话无视就可以</span></span><br><span class="line"><span class="comment"># VKontakte API Support.</span></span><br><span class="line"><span class="comment"># To get your AppID visit https://vk.com/editapp?act=create</span></span><br><span class="line"><span class="attr">vkontakte_api:</span></span><br><span class="line"><span class="attr">  enable:</span>       <span class="literal">false</span></span><br><span class="line"><span class="attr">  app_id:</span>       <span class="comment">#&lt;app_id&gt;</span></span><br><span class="line"><span class="attr">  like:</span>         <span class="literal">true</span></span><br><span class="line"><span class="attr">  comments:</span>     <span class="literal">true</span></span><br><span class="line"><span class="attr">  num_of_posts:</span> <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以给文章添加评分插件，详细的可以去下面注释的链接看一下</span></span><br><span class="line"><span class="comment"># Star rating support to each article.</span></span><br><span class="line"><span class="comment"># To get your ID visit https://widgetpack.com</span></span><br><span class="line"><span class="attr">rating:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  id:</span>     <span class="comment">#&lt;app_id&gt;</span></span><br><span class="line"><span class="attr">  color:</span>  <span class="string">fc6423</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在文章标题下显示文章的阅读量</span></span><br><span class="line"><span class="comment"># 教程的话可以看这里 https://notes.doublemine.me/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud</span></span><br><span class="line"><span class="comment"># Show number of visitors to each article.</span></span><br><span class="line"><span class="comment"># You can visit https://leancloud.cn get AppID and AppKey.</span></span><br><span class="line"><span class="attr">leancloud_visitors:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  app_id:</span> <span class="string">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■</span> <span class="comment">#&lt;app_id&gt;</span></span><br><span class="line"><span class="attr">  app_key:</span> <span class="string">■■■■■■■■■■■■■■■■■■■■■■■■■</span> <span class="comment">#&lt;app_key&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 另一个显示每篇文章访问者数量的工具</span></span><br><span class="line"><span class="comment"># Another tool to show number of visitors to each article.</span></span><br><span class="line"><span class="comment"># visit https://console.firebase.google.com/u/0/ to get apiKey and projectId</span></span><br><span class="line"><span class="comment"># visit https://firebase.google.com/docs/firestore/ to get more information about firestore</span></span><br><span class="line"><span class="attr">firestore:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  collection:</span> <span class="string">articles</span> <span class="comment">#required, a string collection name to access firestore database</span></span><br><span class="line"><span class="attr">  apiKey:</span> <span class="comment">#required</span></span><br><span class="line"><span class="attr">  projectId:</span> <span class="comment">#required</span></span><br><span class="line"><span class="attr">  bluebird:</span> <span class="literal">false</span> <span class="comment">#enable this if you want to include bluebird 3.5.1(core version) Promise polyfill</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 不蒜子统计，在页脚显示总访客数和总浏览量，将 false 改为 true 就能直接使用</span></span><br><span class="line"><span class="comment"># 因为七牛强制过期原有域名所以实际使用的时候需要修改一些东西</span></span><br><span class="line"><span class="comment"># next\layout\_third-party\analytics 这个路径下有一个 busuanzi-counter.swig 文件，打开</span></span><br><span class="line"><span class="comment"># 将 //dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js 改为 //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js</span></span><br><span class="line"><span class="comment"># Show PV/UV of the website/page with busuanzi.</span></span><br><span class="line"><span class="comment"># Get more information on http://ibruce.info/2015/04/04/busuanzi/</span></span><br><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line">  <span class="comment"># count values only if the other configs are false</span></span><br><span class="line">  <span class="comment"># 总开关</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># custom uv span for the whole site</span></span><br><span class="line">  <span class="comment"># 总访客数，可以在数字前面和后面分别设置图标，图标设置方法前面提到过</span></span><br><span class="line"><span class="attr">  site_uv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  site_uv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-user"&gt;&lt;/i&gt;</span></span><br><span class="line"><span class="attr">  site_uv_footer:</span></span><br><span class="line">  <span class="comment"># custom pv span for the whole site</span></span><br><span class="line">  <span class="comment"># 总浏览量，可以在数字前面和后面分别设置图标，图标设置方法前面提到过</span></span><br><span class="line"><span class="attr">  site_pv:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  site_pv_header:</span></span><br><span class="line"><span class="attr">  site_pv_footer:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-eye"&gt;&lt;/i&gt;</span></span><br><span class="line">  <span class="comment"># custom pv span for one page only</span></span><br><span class="line">  <span class="comment"># 本页面浏览量，因为前面用其他插件实现了每篇文章阅读量显示所以这里我没有开启</span></span><br><span class="line"><span class="attr">  page_pv:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  page_pv_header:</span> <span class="string">&lt;i</span> <span class="string">class="fa</span> <span class="string">fa-file-o"&gt;&lt;/i&gt;</span></span><br><span class="line"><span class="attr">  page_pv_footer:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 腾讯家的分析插件</span></span><br><span class="line"><span class="comment"># Tencent analytics ID</span></span><br><span class="line"><span class="comment"># tencent_analytics:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 腾讯家的移动分析插件</span></span><br><span class="line"><span class="comment"># Tencent MTA ID</span></span><br><span class="line"><span class="comment"># tencent_mta:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动将博客文章链接推送给百度</span></span><br><span class="line"><span class="comment"># Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO</span></span><br><span class="line"><span class="attr">baidu_push:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># google 日历</span></span><br><span class="line"><span class="comment"># Google Calendar</span></span><br><span class="line"><span class="comment"># Share your recent schedule to others via calendar page</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># API Documentation:</span></span><br><span class="line"><span class="comment"># https://developers.google.com/google-apps/calendar/v3/reference/events/list</span></span><br><span class="line"><span class="attr">calendar:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  calendar_id:</span> <span class="string">&lt;required&gt;</span></span><br><span class="line"><span class="attr">  api_key:</span> <span class="string">&lt;required&gt;</span></span><br><span class="line"><span class="attr">  orderBy:</span> <span class="string">startTime</span></span><br><span class="line"><span class="attr">  offsetMax:</span> <span class="number">24</span></span><br><span class="line"><span class="attr">  offsetMin:</span> <span class="number">4</span></span><br><span class="line"><span class="attr">  timeZone:</span></span><br><span class="line"><span class="attr">  showDeleted:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  singleEvents:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">  maxResults:</span> <span class="number">250</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Algolia 搜索</span></span><br><span class="line"><span class="comment"># Algolia Search</span></span><br><span class="line"><span class="attr">algolia_search:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">  hits:</span></span><br><span class="line"><span class="attr">    per_page:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">  labels:</span></span><br><span class="line"><span class="attr">    input_placeholder:</span> <span class="string">Search</span> <span class="string">for</span> <span class="string">Posts</span></span><br><span class="line"><span class="attr">    hits_empty:</span> <span class="string">"We didn't find any results for the search: $&#123;query&#125;"</span></span><br><span class="line"><span class="attr">    hits_stats:</span> <span class="string">"$&#123;hits&#125; results found in $&#123;time&#125; ms"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地搜索</span></span><br><span class="line"><span class="comment"># 启用前需要在 Hexo 下运行如下命令</span></span><br><span class="line"><span class="comment"># npm install hexo-generator-searchdb --save</span></span><br><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/flashlab/hexo-generator-search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># if auto, trigger search by changing input</span></span><br><span class="line">  <span class="comment"># if manual, trigger search by pressing enter key or search button</span></span><br><span class="line"><span class="attr">  trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># show top n results per article, show all results by setting to -1</span></span><br><span class="line"><span class="attr">  top_n_per_article:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -785,7 +831,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-事前准备"><span class="nav-text">1 事前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git工具"><span class="nav-text">Git工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Atom"><span class="nav-text">Atom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Typora"><span class="nav-text">Typora</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github账号"><span class="nav-text">Github账号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-本地安装"><span class="nav-text">2 本地安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-安装Hexo"><span class="nav-text">2.1 安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-本地调试"><span class="nav-text">2.2 本地调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-关联-Github-仓库"><span class="nav-text">3 关联 Github 仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-建立-Github-仓库"><span class="nav-text">3.1 建立 Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-关联本地文件夹与-Github-仓库"><span class="nav-text">3.2 关联本地文件夹与  Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-配置-Deploy"><span class="nav-text">3.3 配置 Deploy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-开始部署"><span class="nav-text">3.4 开始部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Blog-配置文件设置"><span class="nav-text">4 Blog 配置文件设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-认识-Blog-配置文件"><span class="nav-text">4.1  认识 Blog 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-Site-标签"><span class="nav-text">4.2 Site 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-URL-标签"><span class="nav-text">4.3 URL 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-Writing-标签"><span class="nav-text">4.4 Writing 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-Home-page-setting-标签"><span class="nav-text">4.5  Home page setting 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-Category-amp-Tag-标签"><span class="nav-text">4.6 Category &amp; Tag 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-Date-Time-format-标签"><span class="nav-text">4.7 Date / Time format 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-Pagination-标签"><span class="nav-text">4.8 Pagination 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-Extensions-标签"><span class="nav-text">4.9 Extensions 标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-主题安装"><span class="nav-text">5 主题安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-安装-NexT"><span class="nav-text">5.1  安装 NexT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-启用-NexT"><span class="nav-text">5.2 启用 NexT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-NexT-配置文件设置"><span class="nav-text">6 NexT 配置文件设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-认识-NexT-配置文件"><span class="nav-text">6.1  认识 NexT 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-override-开关"><span class="nav-text">6.2 override 开关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-favicon-标签"><span class="nav-text">6.3  favicon 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-keywords-标签"><span class="nav-text">6.4  keywords 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-footer-标签"><span class="nav-text">6.5 footer 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6-SEO-Settings"><span class="nav-text">6.6 SEO Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-7-Menu-Settings"><span class="nav-text">6.7 Menu Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-8-Scheme-Settings"><span class="nav-text">6.8 Scheme Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-9-Sidebar-Settings"><span class="nav-text">6.9 Sidebar Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-10-Post-Settings"><span class="nav-text">6.10 Post Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-11-Misc-Theme-Settings"><span class="nav-text">6.11 Misc Theme Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-12-Font-Settings"><span class="nav-text">6.12 Font Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-13-Third-Party-Services-Settings"><span class="nav-text">6.13 Third Party Services Settings</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-1-MathJax-Support"><span class="nav-text">6.13.1 MathJax Support</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-2-汉字标准格式"><span class="nav-text">6.13.2 汉字标准格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-3-Swiftype-站内搜索"><span class="nav-text">6.13.3 Swiftype 站内搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-4-百度统计"><span class="nav-text">6.13.4 百度统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-5-第三方评论"><span class="nav-text">6.13.5 第三方评论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-6-第三方分享"><span class="nav-text">6.13.6 第三方分享</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-事前准备"><span class="nav-text">1 事前准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git工具"><span class="nav-text">Git工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Node-js"><span class="nav-text">Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Atom"><span class="nav-text">Atom</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Typora"><span class="nav-text">Typora</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github账号"><span class="nav-text">Github账号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-本地安装"><span class="nav-text">2 本地安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-安装Hexo"><span class="nav-text">2.1 安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-本地调试"><span class="nav-text">2.2 本地调试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-关联-Github-仓库"><span class="nav-text">3 关联 Github 仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-建立-Github-仓库"><span class="nav-text">3.1 建立 Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-关联本地文件夹与-Github-仓库"><span class="nav-text">3.2 关联本地文件夹与  Github 仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-配置-Deploy"><span class="nav-text">3.3 配置 Deploy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-开始部署"><span class="nav-text">3.4 开始部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Blog-配置文件设置"><span class="nav-text">4 Blog 配置文件设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-认识-Blog-配置文件"><span class="nav-text">4.1  认识 Blog 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-Site-标签"><span class="nav-text">4.2 Site 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-URL-标签"><span class="nav-text">4.3 URL 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-Writing-标签"><span class="nav-text">4.4 Writing 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-Home-page-setting-标签"><span class="nav-text">4.5  Home page setting 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-Category-amp-Tag-标签"><span class="nav-text">4.6 Category &amp; Tag 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-Date-Time-format-标签"><span class="nav-text">4.7 Date / Time format 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-Pagination-标签"><span class="nav-text">4.8 Pagination 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-Extensions-标签"><span class="nav-text">4.9 Extensions 标签</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-主题安装"><span class="nav-text">5 主题安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-安装-NexT"><span class="nav-text">5.1  安装 NexT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-启用-NexT"><span class="nav-text">5.2 启用 NexT</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-NexT-配置文件设置"><span class="nav-text">6 NexT 配置文件设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-认识-NexT-配置文件"><span class="nav-text">6.1  认识 NexT 配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-override-开关"><span class="nav-text">6.2 override 开关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-favicon-标签"><span class="nav-text">6.3  favicon 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-keywords-标签"><span class="nav-text">6.4  keywords 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-footer-标签"><span class="nav-text">6.5 footer 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6-SEO-Settings"><span class="nav-text">6.6 SEO Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-7-Menu-Settings"><span class="nav-text">6.7 Menu Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-8-Scheme-Settings"><span class="nav-text">6.8 Scheme Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-9-Sidebar-Settings"><span class="nav-text">6.9 Sidebar Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-10-Post-Settings"><span class="nav-text">6.10 Post Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-11-Misc-Theme-Settings"><span class="nav-text">6.11 Misc Theme Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-12-Font-Settings"><span class="nav-text">6.12 Font Settings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-13-Third-Party-Services-Settings"><span class="nav-text">6.13 Third Party Services Settings</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-1-MathJax-Support"><span class="nav-text">6.13.1 MathJax Support</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-2-汉字标准格式"><span class="nav-text">6.13.2 汉字标准格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-3-Swiftype-站内搜索"><span class="nav-text">6.13.3 Swiftype 站内搜索</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-4-百度统计"><span class="nav-text">6.13.4 百度统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-5-第三方评论"><span class="nav-text">6.13.5 第三方评论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-6-第三方分享"><span class="nav-text">6.13.6 第三方分享</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-7-站长工具"><span class="nav-text">6.13.7 站长工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-13-8-其他第三方服务"><span class="nav-text">6.13.8 其他第三方服务</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-14-Post-widgets-amp-FB-VK-comments-settings"><span class="nav-text">6.14 Post widgets &amp; FB/VK comments settings</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -823,6 +869,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      <i class="fa fa-eye"></i>
+    </span>
+  
+</div>
+
 
 
 
@@ -843,12 +909,6 @@
       </div>
     
 
-    
-      <div id="needsharebutton-float">
-        <span class="btn">
-          <i class="fa fa-share-alt" aria-hidden="true"></i>
-        </span>
-      </div>
     
 
   </div>
@@ -983,6 +1043,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
@@ -1125,18 +1502,6 @@
       new needShareButton('#needsharebutton-postbottom', pbOptions);
     
     
-      flOptions = {};
-      
-          flOptions.iconStyle = "box";
-      
-          flOptions.boxForm = "horizontal";
-      
-          flOptions.position = "middleRight";
-      
-          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
-      
-      new needShareButton('#needsharebutton-float', flOptions);
-    
   </script>
 
   
@@ -1161,7 +1526,24 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
   
 
 
