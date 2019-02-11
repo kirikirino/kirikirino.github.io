@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-CN">
+<html class="theme-next muse use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,11 +54,7 @@
   
 
   
-    
-      
-    
 
-    
   
 
   
@@ -67,16 +63,8 @@
 
   
     
-      
     
-
-    
-  
-
-  
-    
-    
-    <link rel="stylesheet" href="https://fonts.loli.net/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
+    <link rel="stylesheet" href="https://fonts.loli.net/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext">
   
 
 
@@ -110,14 +98,14 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Muse',
     version: '7.0.0',
     sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
     tabs: true,
-    motion: {"enable":true,"async":true,"transition":{"post_block":"slideRightBigIn","post_header":"perspectiveUpIn","post_body":"fadeIn","coll_header":"slideRightBigIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":false,"transition":{"post_block":"slideRightBigIn","post_header":"perspectiveUpIn","post_body":"slideRightBigIn","coll_header":"perspectiveUpIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -579,41 +567,20 @@
 
       
       
-      
+        <div class="post-widgets">
+        
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
+        
+
+        
+          
+          <div class="social_share">
             
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
             
-              <a href="/p/f1e.html" rel="prev" title="静态 Blog 搭建记事簿">
-                静态 Blog 搭建记事簿 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-        <!--MOB SHARE BEGIN-->
-<div class="-hoofoo-share-title">分享文章到</div>
+          
+            <div>
+              <!--MOB SHARE BEGIN-->
+<div class="-hoofoo-share-title">分享文章</div>
 <div class="-hoofoo-share-buttons">
     <div class="-mob-share-weibo -hoofoo-share-weibo -hoofoo-share-ui-button"><i class="fa fa-weibo" aria-hidden="true"></i></div>
     <div class="-mob-share-weixin -hoofoo-share-weixin -hoofoo-share-ui-button"><i class="fa fa-weixin" aria-hidden="true"></i></div>
@@ -648,8 +615,42 @@
 <script id="-mob-share" src="https://f1.webshare.mob.com/code/mob-share.js?appkey=2a0a171910ea0"></script>
 <!--MOB SHARE END-->
 
+            </div>
+          
+          </div>
+        
+        </div>
       
-    </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/p/f1e.html" rel="prev" title="静态 Blog 搭建记事簿">
+                静态 Blog 搭建记事簿 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -851,8 +852,8 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-user"></i>
     </span>
-    <span class="site-uv" title="总访客量">
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    总访客数<span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>人次
     </span>
   
 
@@ -861,11 +862,11 @@
   
 
   
+    总访问量<span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>次
+    </span>
     <span class="post-meta-item-icon">
       <i class="fa fa-eye"></i>
-    </span>
-    <span class="site-pv" title="总访问量">
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
     </span>
   
 </div>
@@ -958,7 +959,6 @@
 
 
 
-
   
   <script src="/js/src/scrollspy.js?v=7.0.0"></script>
 <script src="/js/src/post-details.js?v=7.0.0"></script>
@@ -993,7 +993,7 @@
     notify: true,
     appId: 'HQT22HqOp2iqiSLxg6Exzm2V-gzGzoHsz',
     appKey: 'DvhsEcEj6gXKrpUei8HUb1sG',
-    placeholder: '总之，说点什么吧...',
+    placeholder: '请开始你的吐槽...',
     avatar: 'identicon',
     meta: guest,
     pageSize: '10' || 10,
