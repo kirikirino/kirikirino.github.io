@@ -1909,7 +1909,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e3ffff;
+  background: #068ac6;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2314,9 +2314,11 @@ pre .javascript .function {
   justify-content: center;
 }
 .-hoofoo-share-title {
-  font-size: 1.1em;
-  font-weight: 200;
+  margin-top: 30px;
+  font-size: 30px;
+  font-weight: 600;
   text-align: center;
+  color: #555;
 }
 .-hoofoo-share-ui-button {
   cursor: pointer;
@@ -2793,6 +2795,21 @@ body {
   src: url("/fonts/LinBiolinum_RIah.eot") format('embedded-opentype'), url("/fonts/LinBiolinum_RIah.woff2") format('woff2'), url("/fonts/LinBiolinum_RIah.woff") format('woff'), url("/fonts/LinBiolinum_RIah.ttf") format('truetype');
   font-weight: normal;
   font-style: italic;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url("iconfont.eot?t=1550503257577"); /* IE9 */
+  src: url("iconfont.eot?t=1550503257577#iefix") format('embedded-opentype'), url("data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOEAAsAAAAABzwAAAM2AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCCcAqCSIIhATYCJAMICwYABCAFhG0HMBtHBsi+QBxw+ysgncTYdTFXivLMuNBXN8PHWftLARG8v9/nnPvuEqDarAV0QAUPqJsqklW7to7I1lc1tYBCsWp88yfG2UTW3ZrQHP1UFSPM6xAjGNrv/1zmCDcHGDUiCYSOCukv516aDoybkFN2xky5ZQHXuxscJCllFgTrAm/+qfGV7QYXrjAN28KLzi8PpsnF5t4jRY/4Ekoq3ue5nN41xOcHynFtGnvwUS/AeGtAY22K87hAAvOG6eULHIj9BKr10wCuH108QF2mhwXiWmAsqBfcssxilUJ5w9wsTlCZ7qZD4Dj6fvy1GiQpK+iC3QuHLuz88JkEcHmpFBCEyxnBFlFgFkAmDhvN20pJeBZYNQ+XDQMcKzf4Ef8fCA77xyOIcjq7FvRCwTMJnehRsxPIsPkqcHNSG3LrgI5U9uc36za+F9z/cuZVaOeCR8PX/vLnqMtTqEZw7kt+V0/3K/TNUdMLZufZrm4b1+vb79C6XjNmZlse0+Abj3TPzXc9pWzMtXZpUbew0tvxQjo6gd/ovz416Ldb469YfYttrbjpK3/x5imEjMqt3WiA0wXT/4fRf75fzgDV9S/74qin4IGdczTZWY6qbj8cuAcejur82+d106t40Zg91PTv8Mdh9M/BF/588/T14R3fvAuJxMpmoG8BnkrOOEjvuLf5t6MCUb9PojZLOQPsAJRY9BSw3/8b//sdpD7zv6Az+L4jkbPEDBhmpfImLcHPFg4sykKs1empBciSXM2lSKgWNiVoe7PnqZq2NzOGyoKQIanQh0KlUTIzZ1GmxgLKVVpCtRmOxTVaFCqJXIVpNQCh0TySem9QaHREZuYTyrT7RrnGAKqdCvKaNcYjTYuQpeRi7AszHE49q9NmnHtHJo8tyYsj1hNJFvjQqDOUY8eUkiwxoejdrBarhynhBO3gMIpjxnzhkBxdTFftren1qaYnLcY5gaY1glgUcaGYLyiDg6W8oLxqVj5/hxi5mEU6KDn/EyIyQevISMcwgDxWpIMoj/JIkXfGqmLKg1IESyA76EViMYbym3uFiEMtSp8Q7FmjN6VSQxWL26uSv1sB1bQ2helWKD/HuW2lAAAA") format('woff2'), url("iconfont.woff?t=1550503257577") format('woff'), url("iconfont.ttf?t=1550503257577") format('truetype'), url("iconfont.svg?t=1550503257577#iconfont") format('svg'); /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 22px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-douban:before {
+  content: "\e64d";
 }
 .headband {
   height: 0px;
